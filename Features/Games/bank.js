@@ -23,11 +23,11 @@ function formatNumber(num) {
 
 function showDashboard(m, user) {
   let yuan = formatNumber(user.yuan);
-  let bankBalance = formatNumber(user.bank);
+  let bankyuan = formatNumber(user.bank);
   let availableLoan = LOAN_LIMIT - user.loan;
   let res = `*[ BANK Dashboard ]*\n\n`;
   res += `*Yuan  :* ${yuan}\n`;
-  res += `*Bank  :* ${bankBalance}\n`;
+  res += `*Bank  :* ${bankyuan}\n`;
   res += `*Sisa Loan Limit :* ${formatNumber(availableLoan)} / ${formatNumber(LOAN_LIMIT)} yuan\n`;
   res += `Auto deduction tiap minggu : ${formatNumber(WEEKLY_DEDUCTION)} yuan\n\n`;
   res += `*[ Menu dashboard ]*\n`;
