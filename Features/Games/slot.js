@@ -13,7 +13,7 @@ export default {
     private: false,
 
     haruna: async function (m, { sock, db, text, args, usedPrefix, command }) {
-        const fa = `*Berikan jumlah balance yang akan dipertaruhkan*\n\n*Contoh:\n${usedPrefix + command} 500*`;
+        const fa = `*Berikan jumlah yuan yang akan dipertaruhkan*\n\n*Contoh:\n${usedPrefix + command} 500*`;
 
         if (!args[0]) return m.reply(fa);
         if (isNaN(args[0])) return m.reply(fa);
@@ -28,15 +28,15 @@ export default {
         }
 
         if (amount < 500) {
-            return m.reply(`*Anda tidak dapat bertaruh balance kurang dari 500*`);
+            return m.reply(`*Anda tidak dapat bertaruh yuan kurang dari 500*`);
         }
 
-        if (user.balance < amount) {
-            return m.reply(`*Anda tidak memiliki cukup balance untuk bertaruh*`);
+        if (user.yuan < amount) {
+            return m.reply(`*Anda tidak memiliki cukup yuan untuk bertaruh*`);
         }
 
         if (amount > 100000) {
-            return m.reply(`*Anda tidak dapat bertaruh balance lebih dari 100000*`);
+            return m.reply(`*Anda tidak dapat bertaruh yuan lebih dari 100000*`);
         }
 
         const emojis = ["🕊️", "🦀", "🦎", "🍒", "🍇", "🍊", "🍋", "🍉", "🍍", "🍓"];
@@ -44,10 +44,10 @@ export default {
         const isWin = Math.random() < winRate;
 
         const end = isWin ?
-            `🎊 Jackpot! Anda menang ${amount * 2} balance` :
-            `Anda kalah ${amount} balance`;
+            `🎊 Jackpot! Anda menang ${amount * 2} yuan` :
+            `Anda kalah ${amount} yuan`;
 
-        user.balance += isWin ? amount : -amount;
+        user.yuan += isWin ? amount : -amount;
         user.lastSlot = Date.now();
 
         const slotResults = `

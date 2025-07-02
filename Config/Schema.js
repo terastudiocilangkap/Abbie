@@ -5,7 +5,7 @@ export const UserSchema = {
 	premium_expired: Number,
 	emails: Array,
 	banned: Boolean,
-	balance: Number,
+	yuan: Number,
 	lastDailyClaim : Number,
 	lastSlot : Number,
 	games: Object,

@@ -1,0 +1,142 @@
+{
+  "fighter": [
+    {
+      "title": "Crimson Bastion Siege",
+      "story": "The fortress once guarded by warrior-saints now bleeds corruption. Each step echoes with forgotten vows. Cut through spectral guardians to claim the Sunless Armor... before its hunger consumes you.",
+      "target": "Defeat 3 Bastion Guardians",
+      "place": "Crimson Bastion of the Forsaken",
+      "rewards": [
+        {"type": "fragment", "amount": 2},
+        {"type": "meat", "amount": 5},
+        {"type": "rune", "amount": 1}
+      ],
+      "delay": 12,
+      "pity": 4
+    },
+    {
+      "title": "Molten Core Judgement",
+      "story": "When the earth dragon Awazu stirred, its dreams melted mountains. Now its nightmares manifest as obsidian golems. Descend into the magma chambers and end its eternal fever-dream.",
+      "target": "Slay Awazu the Earth-Sleeper",
+      "place": "Volcanic Heart of Mount Kazura",
+      "rewards": [
+        {"type": "diamond", "amount": 30},
+        {"type": "fragment", "amount": 3},
+        {"type": "rock", "amount": 8}
+      ],
+      "delay": 18,
+      "pity": 5
+    }
+  ],
+  "mage": [
+    {
+      "title": "Shattered Ley-Line Repair",
+      "story": "Broken magic veins bleed chaos into reality. Restore the ley-lines using starlight sigils while fending off astral parasites feeding on the corruption. One misaligned rune could rupture spacetime.",
+      "target": "Restore 5 Ley-Line Nodes",
+      "place": "Floiting Celestial Archipelagos",
+      "rewards": [
+        {"type": "potion", "amount": 3},
+        {"type": "fragment", "amount": 3},
+        {"type": "rune", "amount": 2}
+      ],
+      "delay": 10,
+      "pity": 3
+    },
+    {
+      "title": "Cursed Codex Retrieval",
+      "story": "The Akashic Tome writes itself with stolen memories. Track its shifting pages through dream libraries where librarians have become ink-monsters. Close the book before your story becomes its next chapter.",
+      "target": "Recover the Akashic Pages",
+      "place": "Infinite Library of Mirrors",
+      "rewards": [
+        {"type": "diamond", "amount": 40},
+        {"type": "fragment", "amount": 4},
+        {"type": "wood", "amount": 6}
+      ],
+      "delay": 24,
+      "pity": 6
+    }
+  ],
+  "archer": [
+    {
+      "title": "Sky-Serpent Hunt",
+      "story": "The cloud serpent Minato no Ryu descends during storms, its razor feathers shredding airships. Stake out between lightning strikes with celestial arrows. Miss one vital spot and it will vanish into the typhoon.",
+      "target": "Pierce 7 Sky-Serpent Weak Points",
+      "place": "Storm Peaks of Hikari",
+      "rewards": [
+        {"type": "string", "amount": 12},
+        {"type": "fragment", "amount": 2},
+        {"type": "meat", "amount": 4}
+      ],
+      "delay": 14,
+      "pity": 4
+    },
+    {
+      "title": "Ghost-Fleet Blockade",
+      "story": "The dead admiral Zhongyang commands phantom junks laden with drowned souls. Ambush his flagship between moon phases when his spirit crew materializes. Let no ship breach the living world's shores.",
+      "target": "Sink Admiral Zhongyang's Flagship",
+      "place": "Sea of Whispering Fog",
+      "rewards": [
+        {"type": "diamond", "amount": 35},
+        {"type": "fragment", "amount": 3},
+        {"type": "potion", "amount": 2}
+      ],
+      "delay": 20,
+      "pity": 5
+    }
+  ],
+  "tank": [
+    {
+      "title": "Siege of Iron Roots",
+      "story": "The Goliath Treant Hammu Ganesha uproots villages with toxic pollen. Lure its roots into molten fissures while enduring venomous thorn-barrages. Each root severed reveals a pulsating heart-seed.",
+      "target": "Destroy 3 Heart-Seeds",
+      "place": "Poison Jungle of Kalivana",
+      "rewards": [
+        {"type": "meat", "amount": 7},
+        {"type": "fragment", "amount": 3},
+        {"type": "rock", "amount": 10}
+      ],
+      "delay": 16,
+      "pity": 4
+    },
+    {
+      "title": "Citadel Gatekeeper",
+      "story": "The Oni King's citadel gate materializes only during meteor showers. Withstand his axe-shamans' onslaught until the last star fades. Fall and the gate seals for another decade.",
+      "target": "Survive for 10 minutes",
+      "place": "Floating Oni Citadel",
+      "rewards": [
+        {"type": "diamond", "amount": 45},
+        {"type": "fragment", "amount": 4},
+        {"type": "potion", "amount": 4}
+      ],
+      "delay": 22,
+      "pity": 6
+    }
+  ],
+  "assassin": [
+    {
+      "title": "Painter of Fates",
+      "story": "The artist Zhiyang traps victims in living paintings that evolve. Infiltrate his gallery and locate the self-portrait hiding his real body. But in his canvases, the scenery watches you back.",
+      "target": "Assassinate Zhiyang in his Canvas",
+      "place": "Museum of Twisted Brushes",
+      "rewards": [
+        {"type": "rune", "amount": 3},
+        {"type": "fragment", "amount": 3},
+        {"type": "wood", "amount": 5}
+      ],
+      "delay": 8,
+      "pity": 3
+    },
+    {
+      "title": "Weaver's Web",
+      "story": "The Dreamweaver Kumo ensnares cities in silk nightmares. Enter her collective unconscious and sever the central thread before the waking world succumbs to eternal sleep.",
+      "target": "Sever the Prime Thread",
+      "place": "Great Web of Shared Dreams",
+      "rewards": [
+        {"type": "diamond", "amount": 50},
+        {"type": "fragment", "amount": 5},
+        {"type": "string", "amount": 15}
+      ],
+      "delay": 26,
+      "pity": 7
+    }
+  ]
+}

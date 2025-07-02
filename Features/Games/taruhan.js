@@ -11,7 +11,7 @@ export default {
 
     haruna: async function (m, { sock, db, text }) {
         if (!text) {
-            return m.reply("Siapa yang ingin kamu ajak taruhan?\n\nContoh: .taruhan BALANCE MENTION_USER\n.taruhan 10000 @player");
+            return m.reply("Siapa yang ingin kamu ajak taruhan?\n\nContoh: .taruhan yuan MENTION_USER\n.taruhan 10000 @player");
         }
 
         const [amountStr, userB] = text.split(" ");
@@ -22,9 +22,9 @@ export default {
         }
 
         const userA = db.users.get(m.sender);
-        const balanceA = userA.balance;
+        const yuanA = userA.yuan;
 
-        if (balanceA < amount) {
+        if (yuanA < amount) {
             return m.reply("Maaf, saldo Anda tidak mencukupi untuk taruhan ini.");
         }
 
@@ -67,7 +67,7 @@ export default {
         const confirmed = await waitForConfirmation();
 
         if (confirmed) {
-            if (userBData.balance < amount) {
+            if (userBData.yuan < amount) {
                 return m.reply("User yang Anda tantang tidak memiliki saldo mencukupi untuk taruhan ini. Taruhan dibatalkan.");
             }
 
@@ -75,11 +75,11 @@ export default {
             const winnerId = winner === 'A' ? m.sender : userBFormatted;
             const loserId = winner === 'A' ? userBFormatted : m.sender;
 
-            const newBalanceA = winner === 'A' ? balanceA + amount : balanceA - amount;
-            const newBalanceB = winner === 'B' ? userBData.balance + amount : userBData.balance - amount;
+            const newyuanA = winner === 'A' ? yuanA + amount : yuanA - amount;
+            const newyuanB = winner === 'B' ? userBData.yuan + amount : userBData.yuan - amount;
 
-            db.users.set(m.sender).balance = newBalanceA
-            db.users.set(userBFormatted).balance = newBalanceB
+            db.users.set(m.sender).yuan = newyuanA
+            db.users.set(userBFormatted).yuan = newyuanB
 
             const winnerName = winner === 'A' ? `User A (Anda)` : `User B (${userB})`;
             const loserName = winner === 'A' ? `User B (${userB})` : `User A (Anda)`;

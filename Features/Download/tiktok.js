@@ -9,42 +9,48 @@ export default {
 	group: false,
 	private: false,
 
-	haruna: async function (m, { sock, api, text }) {
+	haruna: async function (m, { sock, text }) {
 		if (!text) return m.reply("Silakan berikan tautan TikTok.");
 		m.react("💬");
 
 		try {
-			const res = await api.get("/tiktok/download", { url: text });
-			const data = res?.result;
-			if (!data) throw new Error("Tidak dapat mengambil data dari API.");
+			const url = `https://api.apigratis.tech/downloader/tiktok?url=${encodeURIComponent(text)}`;
+			const res = await fetch(url, { headers: { accept: "application/json" } });
+			const json = await res.json();
+			if (!json.status || !json.result) throw new Error("Tidak dapat mengambil data dari API.");
 
-			const { title, author, video, image_data, music } = data;
+			const result = json.result;
+			const author = result.author || {};
+			const download = result.download || {};
+			const type = result.type;
 
-			// Jika image_data (photo mode)
-			if (image_data?.no_watermark_image_list?.length) {
+			// Hilangkan pesan donasi dari desc
+			const desc = (result.desc || "").replace(/Don't forget to support us.*$/, "").trim();
+
+			// Jika slide/gambar
+			if (type === "images" && download.images?.length) {
 				await m.react("🖼️");
 
-				const albumItems = image_data.no_watermark_image_list.map((imgUrl, i) => ({
+				const albumItems = download.images.map((imgUrl, i) => ({
 					image: { url: imgUrl },
-					caption: i === 0 ? `🖼️ *${title}*\n👤 @${author.username}\n\n_${res.powered}_` : undefined
+					caption: i === 0
+						? `🖼️ *${desc || "Tanpa Judul"}*\n👤 @${author.unique_id || "-"} (${author.nickname || "-"})`
+						: undefined
 				}));
 
 				await sock.sendAlbumMessage(
 					m.chat,
 					albumItems,
-					{
-						quoted: m,
-						delay: 1.5 // delay antar file (detik), opsional
-					}
+					{ quoted: m, delay: 1.5 }
 				);
 
-				if (music?.url) {
+				if (download.music) {
 					await sock.sendMessage(
 						m.chat,
 						{
-							audio: { url: music.url },
+							audio: { url: download.music },
 							mimetype: "audio/mp4",
-							fileName: music.title || "audio.mp3",
+							fileName: (download.music_info?.title || "audio") + ".mp3",
 						},
 						{ quoted: m }
 					);
@@ -54,25 +60,29 @@ export default {
 			}
 
 			// Jika video
-			if (video?.nwm_url || video?.nwm_url_hq) {
+			if (type === "video" && download.original) {
 				await m.react("📽️");
 
-				const videoUrl = video.nwm_url_hq || video.nwm_url;
-				const caption = `🎬 *${title}*\n👤 @${author.username}\n✅ Verified: ${author.verified ? "Ya" : "Tidak"}\n🌍 Region: ${data.region}\n\n🎵 Musik: ${music?.title || "Unknown"}\n\n_${res.powered}_`;
+				const caption =
+					`🎬 *${desc || "Tanpa Judul"}*\n` +
+					`👤 @${author.unique_id || "-"} (${author.nickname || "-"})\n` +
+					`🌍 Region: ${result.region || "-"}\n` +
+					`⏱️ Durasi: ${result.duration || "-"} detik\n` +
+					`🎵 Musik: ${download.music_info?.title || "Unknown"}`;
 
 				await sock.sendMessage(
 					m.chat,
-					{ video: { url: videoUrl }, caption },
+					{ video: { url: download.original }, caption },
 					{ quoted: m }
 				);
 
-				if (music?.url) {
+				if (download.music) {
 					await sock.sendMessage(
 						m.chat,
 						{
-							audio: { url: music.url },
+							audio: { url: download.music },
 							mimetype: "audio/mp4",
-							fileName: music.title || "audio.mp3",
+							fileName: (download.music_info?.title || "audio") + ".mp3",
 						},
 						{ quoted: m }
 					);
