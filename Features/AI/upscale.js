@@ -1,5 +1,5 @@
 export default {
-	command: ["upscale"],
+	command: ["hd","upscale", "upscale4x"],
 	description: "Upscale 4x",
 	category: "AI",
 	owner: false,

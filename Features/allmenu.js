@@ -5,11 +5,6 @@ export default {
 	description: "Show this menu",
 	category: "Main",
 	owner: false,
-	admin: false,
-	hidden: false,
-	limit: false,
-	group: false,
-	private: false,
 
 	haruna: async function (
 		m,
@@ -33,31 +28,22 @@ export default {
 			if (c && category?.toLowerCase() !== c) {
 				continue;
 			}
-			message += `\n\`[ ${category} ]\`\n`;
+			message += `\n\`[ ${category} Section ]\`\n`;
 
 			for (const plugin of plugins[category]) {
-				const command = Array.isArray(plugin.customPrefix)
-					? plugin.customPrefix[0]
-					: plugin.customPrefix || Array.isArray(plugin.command)
-						? usedPrefix + plugin.command[0]
-						: usedPrefix + plugin.command;
-
-				// command
-				message +=
-					((plugin.owner && !isOwner) || (plugin.admin && !isAdmin)
-						? `~${command}~`
-						: `${command}`) + "\n";
-
-				// description
-				message += `> ${plugin.description}\n`;
-
-				// aliases
-				const aliases =
-					(Array.isArray(plugin.command) ? plugin.command.slice(1).join(", ") : null) ||
-					null;
-				if (aliases) {
-					message += `> Aliases: ${aliases}\n`;
+				let command;
+				if (Array.isArray(plugin.customPrefix)) {
+					command = plugin.customPrefix[0];
+				} else if (plugin.customPrefix) {
+					command = plugin.customPrefix;
+				} else if (Array.isArray(plugin.command)) {
+					command = usedPrefix + plugin.command[0];
+				} else {
+					command = usedPrefix + plugin.command;
 				}
+
+				// Semua command dibungkus dengan > ``` .command ```
+				message += `> \`\`\`${command}\`\`\`\n`;
 			}
 		}
 

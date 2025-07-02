@@ -13,7 +13,7 @@ export default {
 
 	haruna: async function (
 		m,
-		{ sock, text, usedPrefix, isOwner, isAdmin, feature }
+		{ sock, text, usedPrefix, isOwner, isAdmin, feature, user, db }
 	) {
 		try {
 			const categoryFilter = (text || "").toLowerCase().trim();
@@ -27,9 +27,35 @@ export default {
 			});
 
 			if (!categoryFilter) {
-				let categoryList = "> *List Category Menu :*\n";
+				// Ambil data user dari database
+				const dbUser = db?.users?.get?.(m.sender) || {};
+				const userName = dbUser.name || m.pushName || "User";
+				const userLimit = dbUser.limit !== undefined ? dbUser.limit : "∞";
+				const userStatus = isOwner
+					? "Developer"
+					: isAdmin
+					? "Admin"
+					: dbUser.premium
+					? "Premium"
+					: "User";
+
+				let categoryList = `helloww!🙇‍♀️👋@${userName}! I'm *Amicy-Yukio*!💥 but you can call me anything you want ofc!, i'm your cheerful digital assistant🙌, disini aku bakal bantu kamu kapan pun dan dimana pun kamu butuh, cari aku disaat kamu perlu and taraa!!🪄✨i will immediately come straight from the anime world🌟
+
+kamu punya banyak masalah ? bingung gimana ngatasin nya ?? atau bahkan butuh tempat curhat🤷‍♀️❓
+if you need to convert media, search the web, dan butuh yang praktis🏃‍♀️ juga pasti cepet kasih bantuan⁉️ Just say the word!cause I 'm here 24/7🙋‍♀️✨ to help you with useful tools and smart features 🖥️📱 — all from your WhatsApp 😉✨
+
+Let’s simplify your day with a little touch of tech and a sprinkle of anime spirit~🪄✨
+
+jangan lupa cari dan chat aku ya ? 🙇‍♀️aku bakal nungguin dan bantuin kamu kok!see yaa in our chat room!!💌🎀
+
+[Your Info]
+┌◦ Name: ${userName}
+│◦ Limit: ${userLimit}
+└◦ Status: ${userStatus}
+
+> *List Category Menu :*`;
 				Array.from(availableCategories).forEach((category) => {
-					categoryList += `- ${usedPrefix}menu ${category}\n`;
+					categoryList += `\n- ${usedPrefix}menu ${category}`;
 				});
 				await sock.sendMessage(m.chat, {
 					text: categoryList,
