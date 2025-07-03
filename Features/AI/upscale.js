@@ -27,7 +27,7 @@ export default {
             if (response.status === "Success") {
                 await sock.sendMessage(
                     m.chat,
-                    { image: { url: response.result.url }, caption: `*_${response.powered}_*` },
+                    { image: { url: response.result.url }, caption: `*udah ya kakk jangan lupa follow ch mici :3*` },
                     { quoted: m }
                 );
             } else {
