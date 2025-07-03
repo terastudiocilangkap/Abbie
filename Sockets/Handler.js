@@ -208,7 +208,10 @@ export async function Handler(upsert, sock, store) {
 					message.reply("This commnad only available in private chat");
 					continue;
 				}
-
+				if (plugin.register && !user.registered) {
+					message.reply("🚩 Kamu belum terdaftar! Silakan daftar dulu dengan perintah *.daftar nama. umur*");
+					continue;
+				}
 				if (plugin.limit && !isOwner && !user.premium) {
 					if (user.limit < 0) {
 						message.reply("You have reached the limit of using this command");
