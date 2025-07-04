@@ -65,7 +65,7 @@ export default {
                     m.chat,
                     {
                         image: { url: res.result.url },
-                        caption: `Prompt : ${prompt}\nModel : DallE-XL\n\n*_${res.powered}_*`
+                        caption: `Prompt : ${prompt}\nModel : DallE-XL\n\n*_nih kak hasil nya janlup follow mici :3_*`
                     },
                     { quoted: m }
                 );
@@ -75,7 +75,7 @@ export default {
                     m.chat,
                     {
                         image: { url: hasil.image.url },
-                        caption: `*[ TEXT TO IMAGE ]*\n\n*Prompt :* _${hasil.info.prompt}_\n*Negative Prompt :* _${hasil.info.negative_prompt}_\n*Resolution :* _${hasil.info.resolution}_\n*Sampler :* _${hasil.info.sampler}_\n*Model :* _${hasil.info.model || model}_\n*Size :* _${hasil.image.size}_\n\n*_${res.powered}_*`
+                        caption: `*[ TEXT TO IMAGE ]*\n\n*Prompt :* _${hasil.info.prompt}_\n*Negative Prompt :* _${hasil.info.negative_prompt}_\n*Resolution :* _${hasil.info.resolution}_\n*Sampler :* _${hasil.info.sampler}_\n*Model :* _${hasil.info.model || model}_\n*Size :* _${hasil.image.size}_\n\n*_nih kak hasil nya janlup follow mici :3_*`
                     },
                     { quoted: m }
                 );

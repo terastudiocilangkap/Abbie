@@ -23,7 +23,7 @@ export default {
                 await m.react('☑️');
                 await sock.sendMessage(
                     m.chat,
-                    { video: { url: no_watermark }, caption: `*${res.powered}*` },
+                    { video: { url: no_watermark }, caption: `nih kak hasil nya janlup follow mici :3` },
                     { quoted: m }
                 );
             } else {

@@ -19,7 +19,7 @@ export default {
             await m.react('☑️')
             await sock.sendMessage(
                 m.chat,
-                { image: { url: res.result.url }, caption: `*_${res.powered}_*` },
+                { image: { url: res.result.url }, caption: `*_nih kak hasil nya janlup follow mici :3_*` },
                 { quoted: m }
             );
         } catch (error) {

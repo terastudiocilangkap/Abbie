@@ -35,7 +35,7 @@ export default {
                     for (let imageUrl of res.result) {
                         await sock.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: loadingMessage });
                     }
-                    await sock.sendMessage(m.chat, { text: `Prompt : ${prompt}\n\n*_${res.powered}_*` }, { quoted: loadingMessage });
+                    await sock.sendMessage(m.chat, { text: `Prompt : ${prompt}\n\n*_nih kak hasil nya janlup follow mici :3_*` }, { quoted: loadingMessage });
                 } else {
                     await m.reply("Tidak dapat menemukan gambar untuk prompt tersebut.");
                 }

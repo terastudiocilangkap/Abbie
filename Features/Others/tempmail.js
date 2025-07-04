@@ -43,7 +43,7 @@ export default {
                 return await sock.sendMessage(
                     m.chat,
                     {
-                        text: `✅ *EMAIL BERHASIL DIBUAT*\n\n📩 *ID INBOX*: *_${res.result.id_inbox}_*\n📧 *EMAIL*: *_${res.result.email}_*\n\n⏳ *Catatan:* Email ini hanya akan bertahan selama *10 menit* sebelum dihapus otomatis.\n\n🔗 *${res.powered}*`,
+                        text: `✅ *EMAIL BERHASIL DIBUAT*\n\n📩 *ID INBOX*: *_${res.result.id_inbox}_*\n📧 *EMAIL*: *_${res.result.email}_*\n\n⏳ *Catatan:* Email ini hanya akan bertahan selama *10 menit* sebelum dihapus otomatis.\n\n🔗 nih kak hasil nya janlup follow mici :3`,
                     },
                     { quoted: m }
                 );

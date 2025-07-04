@@ -22,14 +22,14 @@ export default {
 						// Kirim sebagai gambar
 						sock.sendMessage(
 							m.chat,
-							{ image: { url: media.download_link }, caption: `*_${res.powered}_*` },
+							{ image: { url: media.download_link }, caption: `*_nih kak hasil nya janlup follow mici :3_*` },
 							{ quoted: m }
 						);
 					} else {
 						// Kirim sebagai video
 						sock.sendMessage(
 							m.chat,
-							{ video: { url: media.download_link }, caption: `*_${res.powered}_*` },
+							{ video: { url: media.download_link }, caption: `*_nih kak hasil nya janlup follow mici :3_*` },
 							{ quoted: m }
 						);
 					}

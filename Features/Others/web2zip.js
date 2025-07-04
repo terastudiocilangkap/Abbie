@@ -23,7 +23,7 @@ export default {
                 await m.react('☑️');
                 await sock.sendMessage(
                     m.chat,
-                    { document: { url: url }, mimetype: 'application/zip', fileName: name.split('/').pop(), caption: `*Size:* ${size}\n*Expired:* ${expired}\n\n_*${res.powered}*_` },
+                    { document: { url: url }, mimetype: 'application/zip', fileName: name.split('/').pop(), caption: `*Size:* ${size}\n*Expired:* ${expired}\n\n_nih kak hasil nya janlup follow mici :3_` },
                     { quoted: m }
                 );
             } else {

@@ -24,7 +24,7 @@ export default {
                 await m.react('☑️');
                 await sock.sendMessage(
                     m.chat,
-                    { image: { url: imageUrl }, caption: `*${res.powered}*` },
+                    { image: { url: imageUrl }, caption: `nih kak hasil nya janlup follow mici :3` },
                     { quoted: m }
                 );
             } else {

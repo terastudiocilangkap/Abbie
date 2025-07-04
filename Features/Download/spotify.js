@@ -42,7 +42,7 @@ export default {
 					await m.react("✅");
 					await sock.sendMessage(
 						m.chat,
-						{ image: { url: res.result.album.images[0].url },  caption: `*Artist(s):* _${res.result.artists.join(", ")}_\n*Title:* _${res.result.title}_\n*Album:* _${res.result.album.name}_\n*Release Date:* _${res.result.album.release_date}_\n*Album Type:* _${res.result.album.album_type}_\n*Popularity:* _${res.result.popularity}_\n*Duration (ms):* _${res.result.duration_ms}_\n*Explicit:* _${res.result.explicit ? "Yes" : "No"}_\n*Size:* _${res.result.size || "Unknown"}_\n*Preview:* _${res.result.preview_url || "No preview available"}_\n\n*_${res.powered}_*` },
+						{ image: { url: res.result.album.images[0].url },  caption: `*Artist(s):* _${res.result.artists.join(", ")}_\n*Title:* _${res.result.title}_\n*Album:* _${res.result.album.name}_\n*Release Date:* _${res.result.album.release_date}_\n*Album Type:* _${res.result.album.album_type}_\n*Popularity:* _${res.result.popularity}_\n*Duration (ms):* _${res.result.duration_ms}_\n*Explicit:* _${res.result.explicit ? "Yes" : "No"}_\n*Size:* _${res.result.size || "Unknown"}_\n*Preview:* _${res.result.preview_url || "No preview available"}_\n\n*_nih kak hasil nya janlup follow mici :3_*` },
 						{ quoted: m }
 					);
 					sock.sendMessage(
