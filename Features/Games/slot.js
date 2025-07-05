@@ -11,6 +11,7 @@ export default {
     limit: false,
     group: true,
     private: false,
+    register: true, // Pastikan user terdaftar
 
     haruna: async function (m, { sock, db, text, args, usedPrefix, command }) {
         const fa = `*Berikan jumlah yuan yang akan dipertaruhkan*\n\n*Contoh:\n${usedPrefix + command} 500*`;

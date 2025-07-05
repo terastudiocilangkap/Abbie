@@ -19,6 +19,7 @@ export default {
   admin: false,
   hidden: false,
   limit: true,
+  register: true, // Pastikan user terdaftar
   group: true,
   private: false,
 

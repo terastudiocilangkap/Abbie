@@ -23,6 +23,7 @@ const adventure = {
   command: ["adventure", "petualang", "berpetualang"],
   description: "Jalani misi petualangan sesuai role RPG-mu!",
   category: "Games",
+  register: true,
   async haruna(m, { usedPrefix, db, user }) {
     let currentUser = user || (db?.users?.get?.(m.sender) || db?.data?.users?.[m.sender] || db?.users?.[m.sender]);
     if (!currentUser) return m.reply("🚩 Data pengguna tidak ditemukan.");

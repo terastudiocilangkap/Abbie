@@ -1,6 +1,8 @@
 // RPG Bank Plugin Haruna-Bot
 // Fitur: deposit, tarik, pinjam, bayar pinjaman
 
+import { register } from "module";
+
 const LOAN_LIMIT = 15000; // Batas maksimum pinjaman
 const WEEKLY_DEDUCTION = 5000; // Potongan otomatis tiap minggu (untuk scheduler eksternal)
 
@@ -44,6 +46,7 @@ export default {
   hidden: false,
   limit: false,
   group: true,
+  register: true,
   private: false,
 
   /**

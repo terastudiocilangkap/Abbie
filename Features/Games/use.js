@@ -34,6 +34,7 @@ export default {
   limit: false,
   group: false,
   private: false,
+  register: true, // Pastikan user terdaftar
 
   haruna: async function (m, { text, db, user }) {
     try {

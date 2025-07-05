@@ -34,6 +34,7 @@ export default {
 	limit: false,
 	group: false,
 	private: false,
+	register: true, // Pastikan user terdaftar
 
 	haruna: async function (m, { sock, db, user, text, Uploader, Func }) {
 		let currentUser = user || (db?.users?.get?.(m.sender) || db?.data?.users?.[m.sender]);
