@@ -1,13 +1,14 @@
+
 import fs from "fs";
 
 export default {
   command: ["randomimg"],
-  description: "Kirim gambar random dari list JSON berdasarkan tag: NSFW.",
+  description: "Kirim gambar random dari list JSON berdasarkan tag.",
   category: "NSFW",
   haruna: async function(m, options) {
     const { text, sock } = options;
 
-    // Tampilkan list jika help
+    // Jika user ketik.randomimg help, tampilkan semua list JSON
     if (text && text.toLowerCase() === "help") {
       const files = fs.readdirSync("media/nsfw").filter(f => f.endsWith(".json"));
       if (files.length === 0) return m.reply("Belum ada list gambar di folder media/nsfw.");
@@ -24,10 +25,11 @@ export default {
     if (!Array.isArray(data) || data.length === 0) return m.reply("List gambar kosong!");
 
     const randomImg = data[Math.floor(Math.random() * data.length)];
-    // Kirim gambar, randomImg harus string (URL/path)
+    // Pastikan randomImg adalah string (URL/path gambar)
     await sock.sendMessage(
       m.chat,
-      { image: randomImg, caption: `Random gambar: ${text}` },
+      { image: randomImg, caption: `🔞 Random gambar: ${text}\n anak kecik nan polos dilarang lihat 🗿` },
       { quoted: m }
     );
   }
+};
