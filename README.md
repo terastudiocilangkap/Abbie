@@ -1,21 +1,16 @@
 <div align="center">
-  <img src="https://s6.imgcdn.dev/Yc8bUC.png" alt="Kurodate Haruna MD" width="auto" />
-  <h1><strong>Kurodate Haruna MD</strong></h1>
+  <img src="https://github.com/terastudiocilangkap/Abbie/blob/master/media/abbie/5568e8e4f7eaef506267ebf606249f46.jpg" alt="Abbie MD" width="auto" />
+  <h1><strong>Abbie MD</strong></h1>
   <p>
     <strong>Bot WhatsApp performa tinggi yang dibangun dengan arsitektur modular, berbasis event, dan terintegrasi penuh dengan Maelyn API.</strong>
   </p>
 
-  <p>
-    <a href="https://github.com/ClayzaAubert/Haruna-Bot/stargazers"><img src="https://img.shields.io/github/stars/ClayzaAubert/Haruna-Bot?style=for-the-badge&logo=github&color=FFB6C1&logoColor=black" alt="Stars"></a>
-    <a href="https://github.com/ClayzaAubert/Haruna-Bot/network/members"><img src="https://img.shields.io/github/forks/ClayzaAubert/Haruna-Bot?style=for-the-badge&logo=github&color=FFB6C1&logoColor=black" alt="Forks"></a>
-    <a href="https.com/github/ClayzaAubert/Haruna-Bot/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ClayzaAubert/Haruna-Bot?style=for-the-badge&color=FFB6C1&logoColor=black" alt="License"></a>
-    <a href="https://nodejs.org/en/about/releases/"><img src="https://img.shields.io/node/v/npm?style=for-the-badge&logo=nodedotjs&color=FFB6C1&logoColor=black" alt="NodeJS"></a>
   </p>
 
-  <h4>Didukung oleh <a href="https://maelyn.sbs">Maelyn API</a> • Dibangun dari basis <a href="https://github.com/xct007/SuryaRB">SuryaRB</a></h4>
+  <h4>Didukung oleh <a href="https://maelyn.sbs">Maelyn API</a> • Dibangun dari basis <a href="https://github.com/ClayzaAubert/Haruna-Bot.git">Haruna-Bot</a></h4>
 </div>
 
-**Haruna-Bot** adalah kerangka kerja (framework) bot WhatsApp yang dirancang untuk kemudahan kustomisasi dan skalabilitas. Dengan sistem plugin yang intuitif, Anda dapat dengan mudah menambah atau mengubah fitur tanpa menyentuh kode inti. Ditenagai oleh **`@clayzaaubert/baileys-rise`**, sebuah fork Baileys yang dioptimalkan, Haruna-Bot menawarkan stabilitas dan performa yang andal.
+**Abbie bot** adalah kerangka kerja (framework) bot WhatsApp yang dirancang untuk kemudahan kustomisasi dan skalabilitas. Dengan sistem plugin yang intuitif, Anda dapat dengan mudah menambah atau mengubah fitur tanpa menyentuh kode inti. Ditenagai oleh **`@clayzaaubert/baileys-rise`**, sebuah fork Baileys yang dioptimalkan, Haruna-Bot menawarkan stabilitas dan performa yang andal.
 
 ## ✨ Fitur Unggulan
 
@@ -51,8 +46,8 @@
 
 1.  **Clone Repository:**
     ```sh
-    git clone https://github.com/ClayzaAubert/Haruna-Bot.git
-    cd Haruna-Bot
+    git clone https://github.com/terastudiocilangkap/Abbie
+    cd Abbie
     ```
 
 2.  **Instal Dependensi:**
@@ -225,7 +220,8 @@ Berikut adalah beberapa contoh penggunaannya di dalam fungsi `haruna`:
 
 ## 👤 Contributors
 
-* [Clayza Aubert](https://github.com/ClayzaAubert) (Lead Developer)
+* [BF667](https://github.com/BF667) - (Main Dev)
+* [Clayza Aubert](https://github.com/ClayzaAubert) - (Co Developer)
 * [xct007](https://github.com/xct007) (Base Engine - SuryaRB)
 
 ---
