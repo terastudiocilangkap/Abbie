@@ -60,8 +60,7 @@ Aku *${Config.profile.namebot}*, asisten digital kamu yang siap bantu 24/7~✨
               title: Config.profile.namebot,
               body: Config.profile.powered,
               sourceUrl: Config.profile.web,
-              mediaType: 1,
-              renderLargerThumbnail: true
+              mediaType: 1
             }
           }
         });
