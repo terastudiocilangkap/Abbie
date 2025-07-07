@@ -4,7 +4,7 @@ import fs from "fs";
 export default {
   command: ["randomimg"],
   description: "Kirim gambar random dari list JSON berdasarkan tag.",
-  category: "Utility",
+  category: "NSFW",
   haruna: async function(m, options) {
     const { text, sock } = options;
 
