@@ -25,6 +25,11 @@ export default {
     if (!Array.isArray(data) || data.length === 0) return m.reply("List gambar kosong!");
 
     const randomImg = data[Math.floor(Math.random() * data.length)];
-    await sock.sendMessage(m.chat, { image: { url: randomImg }, caption: `Random gambar: ${text}` }, { quoted: m });
+    // Pastikan randomImg adalah string (URL/path gambar)
+    await sock.sendMessage(
+      m.chat,
+      { image: randomImg, caption: `Random gambar: ${text}` },
+      { quoted: m }
+    );
   }
 };
