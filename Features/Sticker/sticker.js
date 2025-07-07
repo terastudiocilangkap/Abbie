@@ -1,34 +1,42 @@
-// File:///home/rose/BOT/SuryaRB/Message/Features/sticker.js
+
 import Sticker from "../../Libs/Sticker.js";
 
 export default {
-    command: ["sticker", "stiker", "s"],
-    description: "Create a sticker",
-    category: "Others",
-    owner: false,
-    group: false,
-    admin: false,
-    hidden: false,
-    limit: false,
-    private: false,
+  command: ["sticker", "stiker", "s"],
+  description: "Create a sticker",
+  category: "Others",
+  owner: false,
+  group: false,
+  admin: false,
+  hidden: false,
+  limit: false,
+  private: false,
 
-    // we are know all of the parameters from the handler
-    haruna: async function (m, { sock }) {
-        const q = m.quoted ? m.quoted : m;
-        const mime = q.mtype || "";
-        if (!/sticker|webp|image|video|webm/g.test(mime)) {
-            console.log(mime);
-            return m.reply("Please reply/send a image with the command");
-        }
-        const image = await q.download();
-        const sticker = await Sticker.create(image, {
-            packname: "Created by",
-            author: "mici",
-            emojis: "💢",
-        });
-        await sock.sendMessage(m.chat, { sticker: sticker }, { quoted: m });
-    },
-    failed: "Failed to haruna the %cmd command\n%error",
-    wait: null,
-    done: null,
+  haruna: async function (m, { sock }) {
+    // Ambil media dari pesan yang direply, kalau tidak ada, dari pesan sendiri
+    const q = m.quoted? m.quoted: m;
+    const mime = q.mtype || "";
+
+    // Cek tipe media yang didukung
+    if (!/image|video|webp/.test(mime)) {
+      return m.reply("Balas foto/video untuk dijadikan stiker!");
+    }
+
+    // Download media
+    const media = await q.download();
+
+    // Buat stiker
+    const sticker = await Sticker.create(media, {
+      packname: "Created by",
+      author: "Abbie",
+      emojis: "🥺",
+    });
+
+    // Kirim stiker ke chat, reply ke pesan asli
+    await sock.sendMessage(m.chat, { sticker: sticker }, { quoted: m });
+  },
+
+  failed: "Failed to haruna the %cmd command\n%error",
+  wait: null,
+  done: null,
 };
