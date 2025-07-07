@@ -1,5 +1,5 @@
 {
-	"name": "haruna-bot",
+	"name": "Abbie",
 	"version": "2.1.5",
 	"description": "WhatsApp Bot",
 	"main": "index.js",
@@ -11,24 +11,24 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/ClayzaAubert/Haruna-Bot.git"
+		"url": "git+https://github.com/terastudiocilangkap/Abbie.git"
 	},
 	"keywords": [
 		"bot",
 		"Baileys",
 		"WABOT",
 		"Maelyn Bot",
-		"Haruna Bot",
+		"Abbie Bot",
 		"Maelyn Group",
 		"Maelyn API",
 		"Whatsapp Bot"
 	],
-	"author": "Clayza Aubert",
+	"author": "BF667",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/ClayzaAubert/Haruna-Bot/issues"
+		"url": "https://github.com/terastudiocilangkap/Abbie/issues"
 	},
-	"homepage": "https://github.com/ClayzaAubert/Haruna-Bot#readme",
+	"homepage": "https://github.com/terastudiocilangkap/Abbie#readme",
 	"dependencies": {
 		"async-mutex": "^0.4.1",
 		"awesome-phonenumber": "^7.5.0",
