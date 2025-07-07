@@ -47,7 +47,7 @@ export default {
                 // Kirim frame terakhir sebagai sticker statis
                 const sticker = await Sticker.create(frames[frames.length - 1], {
                     packname: config?.sticker?.packname || "Created by",
-                    author: config?.sticker?.author || "mici",
+                    author: config?.sticker?.author || "Abbie",
                     emojis: ["😈"]
                 });
                 await sock.sendMessage(m.chat, { sticker }, { quoted: m });
@@ -63,7 +63,7 @@ export default {
                 }
                 const sticker = await Sticker.create(res.data, {
                     packname: config?.sticker?.packname || "Created by",
-                    author: config?.sticker?.author || "mici",
+                    author: config?.sticker?.author || "Abbie",
                     emojis: ["😈"]
                 });
                 await sock.sendMessage(m.chat, { sticker }, { quoted: m });
