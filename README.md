@@ -70,7 +70,7 @@
 *   **Mode Produksi (PM2):**
     ```sh
     pm2 start index.js --name "Abbie"
-    pm2 logs HarunaBot
+    pm2 logs Abbie
     ```
 
 ## 📂 Struktur Proyek
