@@ -29,7 +29,7 @@ export default {
 
 		if (!query) return m.reply(`Silakan masukkan ${isPlay ? "query pencarian" : "URL YouTube"}!`);
 
-		m.react("🔄");
+		m.react("🕕");
 
 		const endpoint = isPlay
 			? "/youtube/play"
