@@ -63,7 +63,7 @@ export default {
 				(isVideo ? `📺 Resolusi: ${definition?.toUpperCase() || "-"}\n` : "") +
 				`📁 Ukuran: ${size || "-"}\n\n` +
 				`📊 Statistik:\n  • Views: ${statistics.viewCount}\n  • Likes: ${statistics.likeCount}\n  • Komentar: ${statistics.commentCount}\n\n` +
-				`📝 Deskripsi:\n${description?.substring(0, 300) || "-"}\n\n_nih kak hasil nya janlup follow mici :3_`;
+				`📝 Deskripsi:\n${description?.substring(0, 300) || "-"}\n\n_${res.powered}_`;
 
 			if (thumbUrl) {
 				await sock.sendMessage(
